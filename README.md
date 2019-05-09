@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-* [Docker](https://www.docker.com/)
+* Install [Docker](https://www.docker.com/)
 
 ## Run
 
