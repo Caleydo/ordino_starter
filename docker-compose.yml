@@ -10,7 +10,7 @@ services:
     volumes:
       - 'db_redis_data:/data'
   web:
-    image: 'thinkh/ordino:starter'
+    image: 'caleydo/ordino:starter'
     ports:
       - '8080:80'
     environment:
@@ -19,7 +19,7 @@ services:
     links:
       - api
   api:
-    image: 'thinkh/ordino_server:starter'
+    image: 'caleydo/ordino_server:starter'
     ports:
       - '9000:9000'
     volumes:
