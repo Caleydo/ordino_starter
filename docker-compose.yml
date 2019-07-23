@@ -42,7 +42,18 @@ services:
       POSTGRES_DB: publicdb
     volumes:
       - 'db_publicdb_data:/var/lib/postgresql/data'
+  pgadmin4:
+    image: thajeztah/pgadmin4
+    depends_on:
+      - db_publicdb
+    links:
+      - db_publicdb
+    ports:
+      - '5050:5050'
+    volumes:
+      - 'pgadmin4_data:/pgadmin'
 volumes:
   db_mongo_data: null
   db_redis_data: null
   db_publicdb_data: null
+  pgadmin4_data: null
