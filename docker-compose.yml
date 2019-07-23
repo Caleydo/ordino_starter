@@ -10,7 +10,7 @@ services:
     volumes:
       - 'db_redis_data:/data'
   web:
-    image: 'caleydo/ordino:starter'
+    image: 'caleydo/ordino:v5.3.0'
     ports:
       - '8080:80'
     environment:
@@ -19,7 +19,7 @@ services:
     links:
       - api
   api:
-    image: 'caleydo/ordino_server:starter'
+    image: 'caleydo/ordino_server:v5.3.0'
     ports:
       - '9000:9000'
     volumes:
