@@ -31,8 +31,8 @@ services:
       - db_redis
       - db_publicdb
     links:
-      - db_mongo
-      - db_redis
+      - 'db_mongo:mongo'
+      - 'db_redis:redis'
       - 'db_publicdb:publicdb'
   db_publicdb:
     image: 'postgres:9.6-alpine'

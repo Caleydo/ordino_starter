@@ -2,22 +2,5 @@
   "phovea_server": {
     "debug": false,
     "port": 9000
-  },
-  "tdp_core": {
-    "host": "db_mongo"
-  },
-  "phovea_data_mongo": {
-    "host": "db_mongo"
-  },
-  "phovea_data_redis": {
-    "assigner": {
-      "hostname": "db_redis"
-    },
-    "mapping": {
-      "hostname": "db_redis"
-    },
-    "cache": {
-      "hostname": "db_redis"
-    }
   }
 }
