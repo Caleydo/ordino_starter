@@ -35,7 +35,7 @@ services:
       - 'db_redis:redis'
       - 'db_publicdb:publicdb'
   db_publicdb:
-    image: 'postgres:9.6-alpine'
+    image: 'postgres:10-alpine'
     environment:
       POSTGRES_USER: publicdb
       POSTGRES_PASSWORD: publicdb
