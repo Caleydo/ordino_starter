@@ -44,7 +44,7 @@ services:
       - 'db_publicdb_data:/var/lib/postgresql/data'
       - './_backup:/backup'
   pgadmin4:
-    image: thajeztah/pgadmin4
+    image: dpage/pgadmin4
     depends_on:
       - db_publicdb
     links:
