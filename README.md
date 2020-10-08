@@ -8,4 +8,4 @@
 
 1. Run `docker-compose up` in your terminal
 2. Navigate to [localhost:8080](http://localhost:8080) in your web browser
-
+3. Login with username `admin` and password `admin`
