@@ -7,7 +7,7 @@ In order to connect from your local computer follow the instructions from [Conne
 ## Prerequisites
 
 * Install [Docker](https://www.docker.com/)
-* In the *config.json*, replace the *username*, *password*, and the *cluster URL* in both mongo connection strings
+* In the [config.json](./config.json), replace the *username*, *password*, and the *cluster URL* in both mongo connection strings
 * Download the [Amazon DocumentDB Certificate Authority (CA)](https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem) as *rds-combined-ca-bundle.pem* into this directory
 
 ## Run
