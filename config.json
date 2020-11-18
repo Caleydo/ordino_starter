@@ -4,10 +4,14 @@
     "port": 9000
   },
   "tdp_core": {
-    "host": "db_mongo"
+    "host": "mongodb://<user>:<password>@sample-cluster.node.us-east-1.docdb.amazonaws.com/targid?ssl=true&ssl_ca_certs=/phovea_config/rds-combined-ca-bundle.pem",
+    "port": 27017,
+    "database": "targid"
   },
   "phovea_data_mongo": {
-    "host": "db_mongo"
+    "host": "mongodb://<user>:<password>@sample-cluster.node.us-east-1.docdb.amazonaws.com/graph?ssl=true&ssl_ca_certs=/phovea_config/rds-combined-ca-bundle.pem",
+    "port": 27017,
+    "database": "graph"
   },
   "phovea_data_redis": {
     "assigner": {
