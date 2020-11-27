@@ -10,22 +10,28 @@ services:
     volumes:
       - 'db_redis_data:/data'
   web:
-    image: 'caleydo/ordino:starter'
+    image: 'caleydo/ordino:starter_env'
     ports:
-      - '8080:80'
+      - '8080:8080'
     environment:
       - PHOVEA_API_SERVER=api:9000
-      - PHOVEA_NGINX_PORT=80
+      - PHOVEA_NGINX_PORT=8080
     links:
       - api
   api:
-    image: 'caleydo/ordino_server:starter'
+    image: 'caleydo/ordino_server:starter_env'
     ports:
       - '9000:9000'
     volumes:
       - '.:/phovea_config'
     environment:
       - PHOVEA_CONFIG_PATH=/phovea_config/config.json
+      - REDIS_HOST=db_redis
+      # - REDIS_USERNAME=redisadmin
+      # - REDIS_PASSWORD=secret
+      - MONGO_HOST=db_mongo
+      # - MONGO_USERNAME=mongoadmin
+      # - MONGO_PASSWORD=secret
     depends_on:
       - db_mongo
       - db_redis

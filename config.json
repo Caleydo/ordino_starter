@@ -4,20 +4,20 @@
     "port": 9000
   },
   "tdp_core": {
-    "host": "db_mongo"
+    "host": "MONGO_HOST"
   },
   "phovea_data_mongo": {
-    "host": "db_mongo"
+    "host": "MONGO_HOST"
   },
   "phovea_data_redis": {
     "assigner": {
-      "hostname": "db_redis"
+      "hostname": "REDIS_HOST"
     },
     "mapping": {
-      "hostname": "db_redis"
+      "hostname": "REDIS_HOST"
     },
     "cache": {
-      "hostname": "db_redis"
+      "hostname": "REDIS_HOST"
     }
   }
 }
