@@ -1,7 +1,7 @@
 version: '2.0'
 services:
   web:
-    image: 'caleydo/ordino:starter'
+    image: 'caleydo/ordino:starter_env'
     ports:
       - '8080:8080'
     environment:
@@ -10,7 +10,7 @@ services:
     links:
       - api
   api:
-    image: 'caleydo/ordino_server:starter'
+    image: 'caleydo/ordino_server:starter_env'
     ports:
       - '9000:9000'
     volumes:
