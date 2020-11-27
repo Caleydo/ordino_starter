@@ -4,24 +4,42 @@
     "port": 9000
   },
   "tdp_core": {
-    "host": "mongodb://<user>:<password>@sample-cluster.node.us-east-1.docdb.amazonaws.com/targid?ssl=true&ssl_ca_certs=/phovea_config/rds-combined-ca-bundle.pem",
+    "host": "mongodb://MONGO_USERNAME:MONGO_PASSWORD@MONGO_HOST/targid?ssl=true&ssl_ca_certs=/phovea_config/rds-combined-ca-bundle.pem",
     "port": 27017,
     "database": "targid"
   },
   "phovea_data_mongo": {
-    "host": "mongodb://<user>:<password>@sample-cluster.node.us-east-1.docdb.amazonaws.com/graph?ssl=true&ssl_ca_certs=/phovea_config/rds-combined-ca-bundle.pem",
+    "host": "mongodb://MONGO_USERNAME:MONGO_PASSWORD@MONGO_HOST/graph?ssl=true&ssl_ca_certs=/phovea_config/rds-combined-ca-bundle.pem",
     "port": 27017,
     "database": "graph"
   },
   "phovea_data_redis": {
     "assigner": {
-      "hostname": "db_redis"
+      "hostname": "REDIS_HOST",
+      "port": 6379,
+      "db": 3,
+      "extras": {
+  
+      },
+      "cache": 262144
     },
     "mapping": {
-      "hostname": "db_redis"
+      "hostname": "REDIS_HOST",
+      "port": 6379,
+      "db": 4,
+      "extras": {
+  
+      },
+      "bulk": false
     },
     "cache": {
-      "hostname": "db_redis"
+      "hostname": "REDIS_HOST",
+      "port": 6379,
+      "db": 5,
+      "extras": {
+  
+      },
+      "timeout": 600
     }
   }
 }

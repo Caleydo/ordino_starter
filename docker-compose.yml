@@ -1,10 +1,5 @@
 version: '2.0'
 services:
-  db_redis:
-    image: 'redis:3.2-alpine'
-    command: 'redis-server --appendonly yes'
-    volumes:
-      - 'db_redis_data:/data'
   web:
     image: 'caleydo/ordino:starter'
     ports:
@@ -22,10 +17,9 @@ services:
       - '.:/phovea_config'
     environment:
       - PHOVEA_CONFIG_PATH=/phovea_config/config.json
-    depends_on:
-      - db_redis
-    links:
-      - db_redis
-volumes:
-  db_mongo_data: null
-  db_redis_data: null
+      - REDIS_HOST=clusterName.xxxxxx.regionAndAz.cache.amazonaws.com
+      - REDIS_USERNAME=foo
+      - REDIS_PASSWORD=bar
+      - MONGO_HOST=sample-cluster.node.us-east-1.docdb.amazonaws.com
+      - MONGO_USERNAME=foo
+      - MONGO_PASSWORD=bar
